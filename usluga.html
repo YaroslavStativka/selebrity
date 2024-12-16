@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20241216195826" />
+   <link rel="stylesheet" href="files/nouislider.min.css?_v=20241216195826" />
+   <link rel="stylesheet" href="files/swiper-bundle.min.css?_v=20241216195826" />
+   <title>Аренда жилья</title>
+</head>
+
+   <body>
+      <header class="header header-green">
+   <div class="header__container _container">
+      <div class="header__body">
+         <div class="header__logo-container">
+            <a href="/" class="header__logo">
+               <img src="img/header-logo.svg" alt="">
+            </a>
+         </div>
+         <div class="header__contacns">
+            <a href="" class="header__whatsapp">
+               <picture><source srcset="img/whatsap.webp" type="image/webp"><img src="img/whatsap.png" alt="whatsap" /></picture>
+            </a>
+            <a href="" class="header__telegram">
+               <picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt="telegram" /></picture>
+            </a>
+            <a href="tel:+34 613 218 651" class="header__phone">+34 613 218 651</a>
+         </div>
+         <div class="header__lang">
+            <a href="" class="header__lang-item">
+               <picture><source srcset="img/spain.webp" type="image/webp"><img src="img/spain.png" alt="" /></picture>
+            </a>
+            <a href="" class="header__lang-item">
+               <picture><source srcset="img/uk.webp" type="image/webp"><img src="img/uk.png" alt="" /></picture>
+            </a>
+            <a href="" class="header__lang-item">
+               <picture><source srcset="img/russia.webp" type="image/webp"><img src="img/russia.png" alt="" /></picture>
+            </a>
+         </div>
+         <div class="header__menu menu">
+            <button type="button" class="menu__icon icon-menu">
+               <span></span>
+            </button>
+            <nav class="menu__body">
+               <ul class="menu__list">
+                  <li><a href="about.html" class="menu__link">Про нас</a></li>
+                  <li><a href="contact.html" class="menu__link">Контакты</a></li>
+                  <li><a href="category.html" class="menu__link">Категории</a></li>
+               </ul>
+               <div class="header__lang-mobile">
+                  <a href="" class="header__lang-item">
+                     <picture><source srcset="img/spain.webp" type="image/webp"><img src="img/spain.png" alt="" /></picture>
+                  </a>
+                  <a href="" class="header__lang-item">
+                     <picture><source srcset="img/uk.webp" type="image/webp"><img src="img/uk.png" alt="" /></picture>
+                  </a>
+                  <a href="" class="header__lang-item">
+                     <picture><source srcset="img/russia.webp" type="image/webp"><img src="img/russia.png" alt="" /></picture>
+                  </a>
+               </div>
+            </nav>
+         </div>
+      </div>
+   </div>
+</header>
+
+      <main>
+         <section class="breadcrumbs">
+            <div class="breadcrumbs__container _container">
+               <div class="breadcrumbs__body">
+                  <a href="/" class="breadcrumbs__first">Главная</a>
+                  <div class="breadcrumbs__slasch">/</div>
+                  <a href="category.html" class="breadcrumbs__second">Категории</a>
+                  <div class="breadcrumbs__slasch">/</div>
+                  <div class="breadcrumbs__fifth">Аренда жилья</div>
+               </div>
+            </div>
+         </section>
+         <section class="usluga">
+            <div class="usluga__container _container">
+               <svg class="bird-svg">
+                  <use xlink:href="img/sprite.svg#bird"></use>
+               </svg>
+               <svg class="podk-svg">
+                  <use xlink:href="img/sprite.svg#podk"></use>
+               </svg>
+               <div class="usluga__body">
+                  <h2 class="usluga__title">Аренда жилья</h2>
+                  <div class="usluga-filters-icon">
+                     <svg class="">
+                        <use xlink:href="img/sprite.svg#filter"></use>
+                     </svg>
+                     Фильтр
+                  </div>
+                  <div class="usluga-filters">
+                     <div class="usluga-filters__btn">применить</div>
+                     <div class="usluga-filter filter-price">
+                        <div class="usluga-filter-title">€ Цена</div>
+                        <div class="price-range">
+                           <span id="price-min">320000</span>
+                           -
+                           <span id="price-max">999000</span>
+                        </div>
+                        <div id="price-slider"></div>
+                     </div>
+                     <div class="usluga-filter filter-location">
+                        <div class="usluga-filter-title">
+                           <svg class="">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           Местоположение
+                        </div>
+                        <div class="usluga-filter__select">
+                           <span class="usluga-filter__selected-option" data-option="all">Местоположение</span>
+                           <ul class="usluga-filter__list">
+                              <li data-filter="all">Все</li>
+                              <li data-filter="alicante">Аликанте</li>
+                              <li data-filter="barselona">Барселона</li>
+                              <li data-filter="madrid">Мадрид</li>
+                             
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="usluga-filter filter-area">
+                        <div class="usluga-filter-title">
+                           <svg class="">
+                              <use xlink:href="img/sprite.svg#area"></use>
+                           </svg>
+                           Площадь
+                        </div>
+                        <div class="usluga-filter__select">
+                           <span class="usluga-filter__selected-option" data-option="all">Площадь</span>
+                           <ul class="usluga-filter__list">
+                              <li data-filter="all">Все</li>
+                              <li data-filter="30">30м2</li>
+                              <li data-filter="40">40m2</li>
+                              <li data-filter="50">50m2</li>
+                              <li data-filter="60">60м2</li>
+                              <li data-filter="70">70m2</li>
+                              <li data-filter="80">80m2</li>
+                             
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="usluga-filter filter-room">
+                        <div class="usluga-filter-title">К-ство комнат</div>
+                        <div class="usluga-filter__select">
+                           <span class="usluga-filter__selected-option" data-option="all">K-ство комнат</span>
+                           <ul class="usluga-filter__list">
+                              <li data-filter="all">Все</li>
+                              <li data-filter="1">1</li>
+                              <li data-filter="2">2</li>
+                              <li data-filter="3">3</li>
+                              <li data-filter="4">4</li>
+                            
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="usluga-filter filter-type">
+                        <div class="usluga-filter-title">Тип недвижимости</div>
+                        <div class="usluga-filter__select">
+                           <span class="usluga-filter__selected-option" data-option="all">Тип недвижимости</span>
+                           <ul class="usluga-filter__list">
+                              <li data-filter="all">Все</li>
+                              <li data-filter="cottedje">Коттедж</li>
+                              <li data-filter="penthause">Пентхаус</li>
+                              <li data-filter="kvartira">Квартира</li>
+                              <li data-filter="house">Дом</li>
+                             
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="usluga__items">
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="alicante"
+                        data-area="60"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="360000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 60м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Аликанте
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 360.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="30"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="360000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 57м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 360.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="madrid"
+                        data-area="30"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="370000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 30м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Мадрид
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 370.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="stambul"
+                        data-area="40"
+                        data-room="2"
+                        data-type="penthause"
+                        data-price="320000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 40м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Стамбул
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 320.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="30"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="820000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 30м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 820.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="50"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="320000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 50м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 320.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="madrid"
+                        data-area="30"
+                        data-room="2"
+                        data-type="penthause"
+                        data-price="990000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 30м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Мадрид
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 990.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="70"
+                        data-room="2"
+                        data-type="kvartira"
+                        data-price="320000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 70м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 320.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="30"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="320000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 30м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 320.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="madrid"
+                        data-area="40"
+                        data-room="2"
+                        data-type="house"
+                        data-price="534000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 40м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Мадрид
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 534.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="80"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="320000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 80м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 320.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="stambul"
+                        data-area="40"
+                        data-room="2"
+                        data-type="cottedje"
+                        data-price="540000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 40м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Стамбул
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 540.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="80"
+                        data-room="2"
+                        data-type="kvartira"
+                        data-price="657000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 80м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 657.000</div>
+                        </div>
+                     </a>
+                     <a
+                        href="single.html"
+                        class="usluga__item"
+                        data-city="barselona"
+                        data-area="30"
+                        data-room="2"
+                        data-type="house"
+                        data-price="380000">
+                        <div class="usluga__item-image">
+                           <picture><source srcset="img/kvart.webp" type="image/webp"><img src="img/kvart.png" alt="image" /></picture>
+                        </div>
+                        <div class="usluga__item-content">
+                           <div class="usluga__item-title">Продается квартира на берегу моря</div>
+                           <div class="usluga__item-khars">
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#area"></use>
+                                 </svg>
+                                 30м2
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#sea"></use>
+                                 </svg>
+                                 Находится на берегу моря
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#location"></use>
+                                 </svg>
+                                 Барселона
+                              </div>
+                              <div class="usluga__item-khar">
+                                 <svg class="">
+                                    <use xlink:href="img/sprite.svg#stage"></use>
+                                 </svg>
+                                 7 этаж
+                              </div>
+                           </div>
+                           <div class="usluga__item-ptice">€ 380.000</div>
+                        </div>
+                     </a>
+                     <div class="usluga__none-posts">Нет соответствующих объектов, попробуйте изменить условия фильтрации</div>
+                  </div>
+                  <div class="usluga__more">
+                     Загрузить еще
+                     <svg class="">
+                        <use xlink:href="img/sprite.svg#more"></use>
+                     </svg>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="main-contacts">
+            <div class="main-contacts__container _container">
+               <div class="main-contacts__body">
+                  <a href="single.html" class="main-contacts__tiktok">
+                     <div class="main-contacts__tiktok-image">
+                        <picture><source srcset="img/tik-tok.webp" type="image/webp"><img src="img/tik-tok.png" alt="tiktok" /></picture>
+                     </div>
+                     <div class="main-contacts__tiktok-text">Мы в Tik Tok</div>
+                  </a>
+                  <div class="main-contacts__contacns">
+                     <a href="" class="main-contacts__whatsapp">
+                        <picture><source srcset="img/whatsap.webp" type="image/webp"><img src="img/whatsap.png" alt="whatsap" /></picture>
+                     </a>
+                     <a href="" class="main-contacts__telegram">
+                        <picture><source srcset="img/telegram.webp" type="image/webp"><img src="img/telegram.png" alt="telegram" /></picture>
+                     </a>
+                  </div>
+                  <a href="tel:+34 613 218 651" class="main-contacts__phone">+34 613 218 651</a>
+                  <a href="single.html" class="main-contacts__button">Связаться с нами</a>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+   <div class="footer__container _container">
+      <div class="footer__body">
+         <a href="/" class="footer__logo">
+            <img src="img/header-logo.svg" alt="" />
+         </a>
+         <div class="footer__menu">
+            <nav class="footer__menu-body">
+               <ul class="footer__menu-list">
+                  <li><a href="" class="footer__menu-link">Аренда жилья</a></li>
+                  <li><a href="" class="footer__menu-link">Земельные участки</a></li>
+                  <li><a href="" class="footer__menu-link">Премиум жилье</a></li>
+                  <li><a href="" class="footer__menu-link">Продажа жилья</a></li>
+                  <li><a href="" class="footer__menu-link">Комерческие предложения</a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+      <script src="files/jquery-3.7.1.min.js?_v=20241216195826"></script>
+      <script src="files/nouislider.min.js?_v=20241216195826"></script>
+      <script src="files/swiper-bundle.min.js?_v=20241216195826"></script>
+      <script src="js/app.min.js?_v=20241216195826"></script>
+   </body>
+</html>
