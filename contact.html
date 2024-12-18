@@ -4,9 +4,9 @@
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="css/style.min.css?_v=20241216195826" />
-   <link rel="stylesheet" href="files/nouislider.min.css?_v=20241216195826" />
-   <link rel="stylesheet" href="files/swiper-bundle.min.css?_v=20241216195826" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20241218093725" />
+   <link rel="stylesheet" href="files/nouislider.min.css?_v=20241218093725" />
+   <link rel="stylesheet" href="files/swiper-bundle.min.css?_v=20241218093725" />
    <title>Контакты</title>
 </head>
 
@@ -104,12 +104,25 @@
                      </a>
                   </div>
                   <a href="tel:+34 613 218 651" class="main-contacts__phone">+34 613 218 651</a>
-                  <a href="#" class="main-contacts__button">Связаться с нами</a>
+                  <a href="javascript:void(0);" class="main-contacts__button">Связаться с нами</a>
                </div>
             </div>
          </section>
       </main>
       <footer class="footer">
+   <div class="form-popup">
+      <div class="form-popup__body">
+         <div class="form-popup__close">х</div>
+         <div class="form-popup__title">Оставьте свои контактные данные</div>
+         <div class="form-popup__text">Мы свяжемся с Вами в ближайшее время</div>
+         <form action="">
+            <input type="text" placeholder="Имя" />
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="номер телефона" />
+            <input type="email" placeholder="Электронная почта" />
+            <input class="form-popup__btn" type="submit" value="Отправить" />
+         </form>
+      </div>
+   </div>
    <div class="footer__container _container">
       <div class="footer__body">
          <a href="/" class="footer__logo">
@@ -130,8 +143,8 @@
    </div>
 </footer>
 
-      <script src="files/jquery-3.7.1.min.js?_v=20241216195826"></script>
-      <script src="files/swiper-bundle.min.js?_v=20241216195826"></script>
-      <script src="js/app.min.js?_v=20241216195826"></script>
+      <script src="files/jquery-3.7.1.min.js?_v=20241218093725"></script>
+      <script src="files/swiper-bundle.min.js?_v=20241218093725"></script>
+      <script src="js/app.min.js?_v=20241218093725"></script>
    </body>
 </html>

@@ -2256,6 +2256,135 @@ main {
   right: 30px !important;
 }
 
+/*===========popup form================================*/
+
+.form-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.537254902);
+  z-index: 1000;
+  display: none;
+}
+
+.form-popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5a5959;
+  cursor: pointer;
+}
+
+.form-popup__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 40px 30px;
+}
+
+.form-popup__body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-popup__body form input {
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a5959;
+  border: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+}
+
+.form-popup__body form input::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+.form-popup__body form input::-moz-placeholder {
+  font-weight: 300;
+}
+
+.form-popup__body form input:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form-popup__body form input::-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form-popup__body form input::placeholder {
+  font-weight: 300;
+}
+
+.form-popup__body form input.form-popup__btn {
+  color: #00a499;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #00a499;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.form-popup__body form input.form-popup__btn:hover {
+  color: #fff;
+  background: #00a499;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form-popup__title {
+  font-size: 28px;
+  line-height: 110%;
+  color: #00a499;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-popup__text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #5a5959;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .main-about__map {
     position: relative;
@@ -3455,6 +3584,19 @@ main {
 
   .contact__map {
     padding-bottom: 75%;
+  }
+
+  .form-popup__title {
+    font-size: 24px;
+  }
+
+  .form-popup__text {
+    font-size: 14px;
+  }
+
+  .form-popup__body {
+    width: 95%;
+    padding: 30px 15px;
   }
 }
 
