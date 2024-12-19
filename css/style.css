@@ -2385,6 +2385,34 @@ main {
   margin-bottom: 20px;
 }
 
+.main-categories__item-green {
+  color: #00a499;
+}
+
+.main-categories__item-yellow .main-categories__item-title {
+  color: yellow;
+}
+
+.main-categories__item-gold .main-categories__item-title {
+  color: gold;
+}
+
+.main-categories__item-blue .main-categories__item-title {
+  color: blue;
+}
+
+.main-categories__item-red .main-categories__item-title {
+  color: red;
+}
+
+.main-categories__item-violet .main-categories__item-title {
+  color: violet;
+}
+
+.main-categories__item-orange .main-categories__item-title {
+  color: orange;
+}
+
 @media (min-width: 768px) {
   .main-about__map {
     position: relative;
