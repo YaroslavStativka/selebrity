@@ -1763,6 +1763,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 22px 20px;
+  height: 100%;
 }
 
 .usluga__item-title {
@@ -1786,6 +1787,9 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 38px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .usluga__item-khar {
